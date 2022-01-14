@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "公司文化",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "mp-html": "/uni_modules/mp-html/components/mp-html/mp-html",
+    "u-parse": "/components/u-parse/u-parse"
+  }
+}

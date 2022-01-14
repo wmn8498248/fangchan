@@ -1,0 +1,527 @@
+<template>
+	<view class="container">
+	
+		<view class="bg-white">
+			<view class="f12 mlr10 mt10">
+				<uni-icons type="sound-filled" size="16" color="#C71114"></uni-icons> 您还可以发布5套租房房源
+			</view>
+			<view class="input-box">
+				<view class="label f15">房源标题</view>
+				<uni-easyinput placeholder="请输入房源标题" placeholderStyle="textAlign:right" class="input"
+					:inputBorder="false" v-model="form.title">
+				</uni-easyinput>
+			</view>
+			<view class="input-box" style="border-bottom: none;">
+				<view class="label f15">房源轮播图<text class="f12 gray ml10">第一张将作为封面</text></view>
+			</view>
+			<view class="upload-box">
+				<view class="upload-item" v-for="(item,index) in form.picList" :key="index">
+					<uni-icons type="clear" size="18" color="#C71114" class="icon" @click="del(index)"></uni-icons>
+					<image src="../../static/images/fm.png" mode="scaleToFill" class="top" v-if="index==0"></image>
+					<image :src="item" mode="scaleToFill" class="thumb"></image>
+				</view>
+				<view class="upload-item" @click="upload">
+					<uni-icons type="plusempty" size="36" color="#eeeeee"></uni-icons>
+				</view>
+			</view>
+			<view class="input-box"  @click="checkXiaoqu">
+				<view class="label f15">小区</view>
+				<uni-easyinput placeholder="请输入小区名称" placeholderStyle="textAlign:right" class="input"
+					:inputBorder="false" v-model="form.buildname">
+				</uni-easyinput>
+			</view>
+			<view class="input-box">
+				<view class="label f15">建筑面积</view>
+				<uni-easyinput placeholder="请输入建筑面积" placeholderStyle="textAlign:right" class="input"
+					:inputBorder="false" v-model="form.area">
+				</uni-easyinput>
+				<text class="gray ml10 f12">㎡</text>
+			</view>
+			<view class="input-box">
+				<view class="label f15">月租金 </view>
+				<uni-easyinput placeholder="请输入价格" placeholderStyle="textAlign:right" class="input"
+					:inputBorder="false"  v-model="form.zhujin">
+				</uni-easyinput>
+				<text class="gray ml10 f12">元</text>
+			</view>
+			<view class="input-box">
+				<view class="label f15">入住时间 </view>
+				<uni-easyinput placeholder="请输入入住时间" placeholderStyle="textAlign:right" class="input"
+					:inputBorder="false"  v-model="form.ruzhusj">
+				</uni-easyinput>
+				<text class="gray ml10 f12"></text>
+			</view>
+			<view class="input-box">
+				<view class="label f15">看房时间 </view>
+				<uni-easyinput placeholder="请输入看房时间" placeholderStyle="textAlign:right" class="input"
+					:inputBorder="false"  v-model="form.kanfangsj">
+				</uni-easyinput>
+				<text class="gray ml10 f12"></text>
+			</view>
+			<view class="input-box">
+				<view class="label f15">联系电话 </view>
+				<uni-easyinput placeholder="请输入联系电话" placeholderStyle="textAlign:right" class="input" :inputBorder="false"
+					v-model="form.tel">
+				</uni-easyinput>
+				<text class="gray ml10 f12"></text>
+			</view>
+		</view>
+		<view class="bg-white mt10 pb10">
+			<view class="input-box" style="border-bottom: none;">
+				<view class="label f15">选择区域</view>
+			</view>
+			<uni-data-picker :localdata="area_arr" v-model="form.region" @change="changeregion">
+				<view class="cell flex between mlr10">
+					<view class="gray f12">{{txt4}}</view>
+					<uni-icons type="right" size="18" color="#777"></uni-icons>
+				</view>
+			</uni-data-picker>			 
+		</view>
+		<view class="bg-white mt10 pb10">
+			<view class="input-box" style="border-bottom: none;">
+				<view class="label f15">户型 | 朝向 | 装修 | 车位</view>
+			</view>
+			<view class="cell flex between mlr10" @click="$refs.popup.open()">
+				<view class="gray f12">{{txt1}}</view>
+				<uni-icons type="right" size="18" color="#777"></uni-icons>
+			</view>
+		</view>
+		<view class="bg-white mt10 pb10">
+			<view class="input-box" style="border-bottom: none;">
+				<view class="label f15">楼层 | 电梯 | 方式</view>
+			</view>
+			<view class="cell flex between mlr10"  @click="$refs.popup2.open()">
+				<view class="gray f12">{{txt2}}</view>
+				<uni-icons type="right" size="18" color="#777"></uni-icons>
+			</view>
+		</view>
+		<navigator class="buttons" hover-class="none" url="./zufang_n">
+			下一步
+		</navigator>
+		<uni-popup ref="popup" type="bottom" class="popup" background-color="#ffffff">
+			<view class="popup-close">
+				<uni-icons type="clear" size="32" color="#777" @click="$refs.popup.close()"></uni-icons>
+			</view>
+			<picker-view :indicator-style="indicatorStyle" class="picker-view" @change="bindChange" :value="value">
+				<picker-view-column>
+					<view class="item">选择户型</view>
+					<view class="item" v-for="(item,index) in huxing_arr" :key="index">{{item.name}}</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view class="item">选择朝向</view>
+					<view class="item" v-for="(item,index) in cx_arr" :key="index">{{item.name}}</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view class="item">选择装修</view>
+					<view class="item" v-for="(item,index) in zx_arr" :key="index">{{item.name}}</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view class="item">是否车位</view>
+					<view class="item" v-for="(item,index) in cw_arr" :key="index">{{item.name}}</view>
+				</picker-view-column>
+			</picker-view>
+			<view class="picker-btn" @click="enter">确定</view>
+		</uni-popup>
+		<uni-popup ref="popup2" type="bottom" class="popup" background-color="#ffffff">
+			<view class="popup-close">
+				<uni-icons type="clear" size="32" color="#777" @click="$refs.popup2.close()"></uni-icons>
+			</view>
+			<picker-view :indicator-style="indicatorStyle" class="picker-view" @change="bindChange2" :value="value2">
+				<picker-view-column>
+					<view class="item">选择楼层</view>
+					<view class="item" v-for="(item,index) in lc_arr" :key="index">{{item.name}}</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view class="item">选择电梯</view>
+					<view class="item" v-for="(item,index) in dt_arr" :key="index">{{item.name}}</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view class="item">租房方式</view>
+					<view class="item" v-for="(item,index) in zfss_arr" :key="index">{{item.name}}</view>
+				</picker-view-column>
+ 
+			</picker-view>
+			<view class="picker-btn" @click="enter2">确定</view>
+		</uni-popup>
+		<!-- <uni-popup ref="popup3" type="bottom" class="popup" background-color="#ffffff">
+			<view class="popup-close">
+				<uni-icons type="clear" size="32" color="#777" @click="$refs.popup3.close()"></uni-icons>
+			</view>
+			<picker-view :indicator-style="indicatorStyle" class="picker-view" @change="bindChange3" :value="value3">
+				<picker-view-column>
+					<view class="item">租房方式</view>
+					<view class="item" v-for="(item,index) in zfss_arr" :key="index">{{item.name}}</view>
+				</picker-view-column> 
+			</picker-view>
+			<view class="picker-btn" @click="enter3">确定</view>
+		</uni-popup> -->
+	</view>
+</template>
+
+<script>
+	const app = getApp()
+	const key = app.globalData.map; //使用在腾讯位置服务申请的key
+	const referer = 'app'; //调用插件的app的名称 	
+	const chooseLocation = requirePlugin('chooseLocation');
+	export default {
+		data() {
+			return {
+				checked: true,
+				visible: false,
+				indicatorStyle: `height: 50px;`,
+				form: {
+					region:'',
+					title:'',
+					mainpic:'',
+					picList:[],
+					buildname:'',
+					area:'',
+					zhujin:'',
+					buju:'',
+					chaoxiang:'',
+					zhuangxiu:'',
+					floor:'',
+					dianti:'',					
+					zffs:'',
+					ruzhusj:'',
+					kanfangsj:'',
+					lat:'',
+					lng:'',
+					tel:''
+				},
+				thumbs: [],
+				picker: [],
+				picker2: [],
+				picker3: [],
+				value:[0,0,0,0],
+				value2:[0,0,0],
+				value3:[0],
+				huxing_arr: [],
+				cx_arr: [],
+				zx_arr: [], 
+				dt_arr:[],
+				lc_arr:[],
+				zfss_arr:[],
+				area_arr:[],
+				cw_arr:[],
+				txt1:'请选择',
+				txt2:'请选择',
+				txt4:'请选择'
+			}
+		},
+		onLoad() {
+			if (this.vuex_login == 0) {
+				this.$u.route('pages/login/index');
+				return
+			}
+			this.init()
+		},
+		onShow() {
+			const location = chooseLocation.getLocation();
+			if(location){
+				console.log(location)
+				this.form.lat = location.latitude
+				this.form.lng = location.longitude
+				this.form.buildname = location.name
+			}
+		},
+		onUnload() {
+			// 页面卸载时设置插件选点数据为null，防止再次进入页面，geLocation返回的是上次选点结果
+			chooseLocation.setLocation(null);
+		},
+		computed:{
+			 
+		},
+		methods: {
+			checkXiaoqu() {
+				wx.navigateTo({
+					url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer
+				});
+			},
+			init() {
+				this.$u.post('/api/huxingcode').then((res) => {
+					res.data.forEach((item) => {
+						this.huxing_arr.push({
+							value: item.dictCode,
+							name: item.dictLabel,
+						})
+					})
+				})
+				this.$u.post('/api/cxcode').then((res) => {
+					res.data.forEach((item) => {
+						this.cx_arr.push({
+							value: item.dictCode,
+							name: item.dictLabel,
+						})
+					})
+				})
+				this.$u.post('/api/zxcode').then((res) => {
+					res.data.forEach((item) => {
+						this.zx_arr.push({
+							value: item.dictCode,
+							name: item.dictLabel,
+						})
+					})
+				})
+				this.$u.post('/api/lccode').then((res) => {
+					res.data.forEach((item) => {
+						this.lc_arr.push({
+							value: item.dictCode,
+							name: item.dictLabel,
+						})
+					})
+				})
+				this.$u.post('/api/dtcode').then((res) => {
+					res.data.forEach((item) => {
+						this.dt_arr.push({
+							value: item.dictCode,
+							name: item.dictLabel,
+						})
+					})
+				})
+				this.$u.post('/api/zfsscode').then((res) => {
+					res.data.forEach((item) => {
+						this.zfss_arr.push({
+							value: item.dictCode,
+							name: item.dictLabel,
+						})
+					})
+				})
+				this.$u.post('/api/zfcwzd').then((res) => {
+					res.data.forEach((item) => {
+						this.cw_arr.push({
+							value: item.dictCode,
+							name: item.dictLabel,
+						})
+					})
+				}) 
+				this.$u.post('/api/area').then((res) => {
+					this.area_arr = res.data
+				})
+			},
+			changeregion(e){
+				console.log(e.detail.value)
+				this.txt4 = e.detail.value.map((item)=>{
+					return item.text
+				}).join('-')
+			},
+			bindChange(e) {
+				this.picker = e.detail.value
+				console.log(e)
+			},
+			bindChange2(e) {
+				this.picker2 = e.detail.value
+				console.log(e)
+			},
+			bindChange3(e) {
+				this.picker3 = e.detail.value
+				console.log(e)
+			},
+			enter() {
+				if (this.picker.length == 0) {
+					this.$u.toast('没有选择')
+					return
+				}
+				let arr = this.picker.filter((item) => {
+					return item == 0
+				})
+				if (arr.length > 0) {
+					this.$u.toast('选择不完整')
+					return
+				}
+				this.txt1 = this.huxing_arr[this.picker[0]-1].name+' - '+this.cx_arr[this.picker[1]-1].name+' - '+this.zx_arr[this.picker[2]-1].name+' - '+this.cw_arr[this.picker[3]-1].name
+				this.form.buju = this.huxing_arr[this.picker[0]-1].value
+				this.form.chaoxiang = this.cx_arr[this.picker[1]-1].value
+				this.form.zhuangxiu = this.zx_arr[this.picker[2]-1].value
+				this.form.chewei = this.cw_arr[this.picker[3]-1].value
+				this.$refs.popup.close()
+				this.picker = [0,0,0,0]
+			},
+			enter2() {
+				if (this.picker2.length == 0) {
+					this.$u.toast('没有选择')
+					return
+				}
+				let arr = this.picker2.filter((item) => {
+					return item == 0
+				})
+				if (arr.length > 0) {
+					this.$u.toast('选择不完整')
+					return
+				}
+				this.txt2 = this.lc_arr[this.picker2[0]-1].name+' - '+this.dt_arr[this.picker2[1]-1].name+' - '+this.zfss_arr[this.picker2[2]-1].name
+				this.form.floor = this.lc_arr[this.picker2[0]-1].value
+				this.form.dianti = this.dt_arr[this.picker2[1]-1].value
+				this.form.zffs = this.zfss_arr[this.picker2[2]-1].value
+				this.$refs.popup2.close()
+				this.picker2 = [0,0,0]
+			},
+			del(index) {
+				this.form.picList.splice(index, 1)
+			},
+			upload() {
+				uni.chooseImage({
+					count: 6, //默认9
+					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+					sourceType: ['album'], //从相册选择
+					success: (res) => {
+						const tempFilePaths = res.tempFilePaths;
+						tempFilePaths.forEach((item) => {
+							uni.uploadFile({
+								url: this.$baseUrl() + '/api/uploadFile', //仅为示例，非真实的接口地址
+								filePath: item,
+								name: 'file',
+								formData: {
+									'user': 'test'
+								},
+								success: (uploadFileRes) => {
+									let data = JSON.parse(uploadFileRes.data)
+									this.form.picList.push(data.msg)
+								}
+							});
+						})
+					}
+				});
+			},
+
+		}
+	}
+</script>
+<style>
+	page {
+		background-color: #F1F4F8;
+	}
+
+	input {
+		text-align: right;
+	}
+</style>
+<style scoped>
+	.container {
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		min-height: 100vh;
+	}
+
+	.upload-box {
+		margin: 10rpx auto 0 auto;
+		width: 710rpx;
+		border-bottom: #eee 1px solid;
+		padding-bottom: 30rpx;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-row-gap: 15px;
+		grid-column-gap: 15px
+	}
+
+	.upload-box .upload-item {
+		border: #eee 1px dashed;
+		height: 120rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	.upload-box .upload-item .top {
+		position: absolute;
+		width: 50rpx;
+		height: 50rpx;
+		top: 0;
+		left: 0;
+		z-index: 200;
+	}
+
+	.upload-box .upload-item .icon {
+		position: absolute;
+		z-index: 200;
+	}
+
+	.upload-box .upload-item .thumb {
+		height: 120rpx;
+		width: 100%;
+	}
+
+	.input-box {
+		margin: 0 20rpx;
+		display: flex;
+		border-bottom: #eee 1px solid;
+		padding: 20rpx 0;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.input-box .label {
+		flex: 1;
+	}
+
+	.input-box .input {
+		text-align: right;
+	}
+
+	.input-box .btn {
+		height: 60rpx;
+		color: #C71114;
+		border-radius: 40rpx;
+		text-align: center;
+		line-height: 60rpx;
+		margin-right: 16rpx;
+		margin-left: auto;
+		font-size: 30rpx;
+	}
+
+	.input-box:last-child {
+		border-bottom: none;
+	}
+
+	.container .buttons {
+		margin-top: auto;
+		width: 750rpx;
+		height: 90rpx;
+		background-color: #C71114;
+		color: #fff;
+		text-align: center;
+		line-height: 90rpx;
+		font-size: 32rpx;
+		margin-top: auto;
+	}
+
+
+	.popup {
+
+		width: 750rpx;
+		position: relative;
+	}
+
+	.picker-view {
+		height: 600rpx;
+
+	}
+
+	.popup-close {
+		position: absolute;
+		top: 20rpx;
+		right: 20rpx;
+		z-index: 300;
+	}
+
+	.picker-btn {
+		width: 700rpx;
+		height: 90rpx;
+		background-color: #C71114;
+		color: #fff;
+		text-align: center;
+		line-height: 90rpx;
+		margin: 20rpx auto;
+		border-radius: 16rpx;
+	}
+
+	.picker-view .item {
+		height: 50px;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		line-height: 50px;
+	}
+</style>

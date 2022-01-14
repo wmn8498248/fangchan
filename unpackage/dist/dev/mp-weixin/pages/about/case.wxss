@@ -1,0 +1,34 @@
+
+page {
+	background-color: #fff
+}
+
+
+.banner.data-v-70c8eeaa {
+	width: 750rpx;
+	height: 162rpx;
+}
+.service-list.data-v-70c8eeaa {
+	display: flex;
+	flex-direction: column;
+	width: 712rpx;
+	background: #FFFFFF;
+	border-radius: 14rpx;
+	margin: 20rpx auto;
+	padding-bottom: 20rpx;
+}
+.service-list .item.data-v-70c8eeaa {
+	display: flex;
+	border-bottom: #eee 1px solid;
+	padding-bottom: 20rpx;
+}
+.service-list .item.data-v-70c8eeaa:last-child {
+	border-bottom: none;
+}
+.service-list .item .thumb.data-v-70c8eeaa {
+	width: 259rpx;
+	height: 178rpx;
+}
+
+
+

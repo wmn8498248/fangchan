@@ -1,0 +1,102 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/search",
+    "pages/list/index",
+    "pages/bieshu/index",
+    "pages/bieshu/show",
+    "pages/ershoufang/index",
+    "pages/ershoufang/show",
+    "pages/ershoufang/more",
+    "pages/ershoufang/info",
+    "pages/agent/index",
+    "pages/sale/index",
+    "pages/about/index",
+    "pages/about/wenhua",
+    "pages/about/fengcai",
+    "pages/about/case",
+    "pages/about/show",
+    "pages/my/index",
+    "pages/my/favor",
+    "pages/my/follow",
+    "pages/my/mark",
+    "pages/my/xieyi",
+    "pages/my/about",
+    "pages/shop/index",
+    "pages/login/index",
+    "pages/login/phone",
+    "pages/agent/apply",
+    "pages/post/ershoufang",
+    "pages/post/ershoufang_n",
+    "pages/shop/customer",
+    "pages/shop/post",
+    "pages/post/apply",
+    "pages/post/zufang",
+    "pages/post/zufang_n",
+    "pages/post/news",
+    "pages/post/news_n",
+    "pages/news/index",
+    "pages/news/show",
+    "pages/news/house",
+    "pages/news/loupan",
+    "pages/zufang/index",
+    "pages/zufang/show",
+    "pages/news/yuangong"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#6d6d6d",
+    "selectedColor": "#C61013",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/tabbar/tabbar1.png",
+        "selectedIconPath": "/static/tabbar/tabbar1-1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/ershoufang/index",
+        "iconPath": "/static/tabbar/tabbar3.png",
+        "selectedIconPath": "/static/tabbar/tabbar3-3.png",
+        "text": "二手房"
+      },
+      {
+        "pagePath": "pages/sale/index",
+        "iconPath": "/static/tabbar/tabbar2.png",
+        "selectedIconPath": "/static/tabbar/tabbar2-2.png",
+        "text": "急售"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "/static/tabbar/tabbar4.png",
+        "selectedIconPath": "/static/tabbar/tabbar4-4.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取用户的位置"
+    }
+  },
+  "plugins": {
+    "citySelector": {
+      "version": "1.0.0",
+      "provider": "wx63ffb7b7894e99ae"
+    },
+    "chooseLocation": {
+      "version": "1.0.6",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

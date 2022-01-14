@@ -1,0 +1,119 @@
+
+page {
+	background-color: #F1F4F8;
+}
+input {
+	text-align: right;
+}
+
+
+.container.data-v-4edbd256 {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100vh;
+}
+.upload-box.data-v-4edbd256 {
+	margin: 10rpx auto 0 auto;
+	width: 710rpx;
+	border-bottom: #eee 1px solid;
+	padding-bottom: 30rpx;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-row-gap: 15px;
+	grid-column-gap: 15px
+}
+.upload-box .upload-item.data-v-4edbd256 {
+	border: #eee 1px dashed;
+	height: 120rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.upload-box .upload-item .top.data-v-4edbd256 {
+	position: absolute;
+	width: 50rpx;
+	height: 50rpx;
+	top: 0;
+	left: 0;
+	z-index: 200;
+}
+.upload-box .upload-item .icon.data-v-4edbd256 {
+	position: absolute;
+	z-index: 200;
+}
+.upload-box .upload-item .thumb.data-v-4edbd256 {
+	height: 120rpx;
+	width: 100%;
+}
+.input-box.data-v-4edbd256 {
+	margin: 0 20rpx;
+	display: flex;
+	border-bottom: #eee 1px solid;
+	padding: 20rpx 0;
+	justify-content: space-between;
+	align-items: center;
+}
+.input-box .label.data-v-4edbd256 {
+	flex: 1;
+}
+.input-box .input.data-v-4edbd256 {
+	text-align: right;
+}
+.input-box .btn.data-v-4edbd256 {
+	height: 60rpx;
+	color: #C71114;
+	border-radius: 40rpx;
+	text-align: center;
+	line-height: 60rpx;
+	margin-right: 16rpx;
+	margin-left: auto;
+	font-size: 30rpx;
+}
+.input-box.data-v-4edbd256:last-child {
+	border-bottom: none;
+}
+.container .buttons.data-v-4edbd256 {
+	margin-top: auto;
+	width: 750rpx;
+	height: 90rpx;
+	background-color: #C71114;
+	color: #fff;
+	text-align: center;
+	line-height: 90rpx;
+	font-size: 32rpx;
+	margin-top: auto;
+}
+.popup.data-v-4edbd256 {
+
+	width: 750rpx;
+	position: relative;
+}
+.picker-view.data-v-4edbd256 {
+	height: 600rpx;
+}
+.popup-close.data-v-4edbd256 {
+	position: absolute;
+	top: 20rpx;
+	right: 20rpx;
+	z-index: 300;
+}
+.picker-btn.data-v-4edbd256 {
+	width: 700rpx;
+	height: 90rpx;
+	background-color: #C71114;
+	color: #fff;
+	text-align: center;
+	line-height: 90rpx;
+	margin: 20rpx auto;
+	border-radius: 16rpx;
+}
+.picker-view .item.data-v-4edbd256 {
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 50px;
+}
+

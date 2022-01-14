@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "急售",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "uni-search-bar": "/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar",
+    "ds-search": "/components/ds/ds-search",
+    "ds-swiper": "/components/ds/ds-swiper"
+  }
+}

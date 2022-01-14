@@ -1,0 +1,22 @@
+
+page {
+	background-color: #F1F4F8
+}
+
+
+.infos.data-v-540d2530 {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 338rpx 338rpx;
+	grid-row-gap: 20px;
+}
+.infos .item.data-v-540d2530 {
+	width: 338rpx;
+	height: 303rpx;
+}
+.infos .item .thumb.data-v-540d2530 {
+	width: 338rpx;
+	height: 303rpx;
+	border-radius: 8rpx;
+}
+

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "公司案例",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "ds-swiper": "/components/ds/ds-swiper"
+  }
+}

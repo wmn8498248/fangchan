@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "别墅",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ds-search": "/components/ds/ds-search",
+    "ds-swiper": "/components/ds/ds-swiper"
+  }
+}

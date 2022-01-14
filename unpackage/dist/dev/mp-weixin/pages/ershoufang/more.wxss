@@ -1,0 +1,10 @@
+
+page {
+	background-color: #F1F4F8
+}
+
+
+.infos .item.data-v-42120582 {		
+	line-height: 48rpx;
+}
+

@@ -1,0 +1,392 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "西藏姐妹房产在线",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/index/search",
+			"style": {
+				"navigationBarTitleText": "搜索房源",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				 "enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/list/index",
+			"style": {
+				"navigationBarTitleText": "微信授权登录",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#3E7563"
+			}
+		},
+		{
+			"path": "pages/bieshu/index",
+			"style": {
+				"navigationBarTitleText": "别墅",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				 "enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/bieshu/show",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				 "enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/ershoufang/index",
+			"style": {
+				"navigationBarTitleText": "二手房",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				 "enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/ershoufang/show",
+			"style": {
+				"navigationBarTitleText": "二手房详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/ershoufang/more",
+			"style": {
+				"navigationBarTitleText": "更多详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/ershoufang/info",
+			"style": {
+				"navigationBarTitleText": "房源介绍",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/agent/index",
+			"style": {
+				"navigationBarTitleText": "经纪人",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/sale/index",
+			"style": {
+				"navigationBarTitleText": "急售",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/about/index",
+			"style": {
+				"navigationBarTitleText": "公司介绍",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/about/wenhua",
+			"style": {
+				"navigationBarTitleText": "公司文化",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/about/fengcai",
+			"style": {
+				"navigationBarTitleText": "公司风采",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/about/case",
+			"style": {
+				"navigationBarTitleText": "公司案例",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/about/show",
+			"style": {
+				"navigationBarTitleText": "案例详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationStyle":"custom"
+				
+			}
+		},
+		{
+			"path": "pages/my/favor",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+				
+			}
+		},
+		{
+			"path": "pages/my/follow",
+			"style": {
+				"navigationBarTitleText": "我的关注",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+				
+			}
+		},
+		{
+			"path": "pages/my/mark",
+			"style": {
+				"navigationBarTitleText": "我的足迹",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+				
+			}
+		},
+		{
+			"path": "pages/my/xieyi",
+			"style": {
+				"navigationBarTitleText": "用户协议",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+				
+			}
+		},
+		{
+			"path": "pages/my/about",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+				
+			}
+		},
+ 
+		{
+			"path": "pages/shop/index",
+			"style": {
+				"navigationBarTitleText": "我的店铺",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationStyle":"custom"
+				
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/login/phone",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/agent/apply",
+			"style": {
+				"navigationBarTitleText": "申请入住",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/post/ershoufang",
+			"style": {
+				"navigationBarTitleText": "发布二手房",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/post/ershoufang_n",
+			"style": {
+				"navigationBarTitleText": "下一步",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/shop/customer",
+			"style": {
+				"navigationBarTitleText": "我的客户",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/shop/post",
+			"style": {
+				"navigationBarTitleText": "我的发布",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/post/apply",
+			"style": {
+				"navigationBarTitleText": "我要买房租房",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/post/zufang",
+			"style": {
+				"navigationBarTitleText": "发布房源 ",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/post/zufang_n",
+			"style": {
+				"navigationBarTitleText": "发布房源 ",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/post/news",
+			"style": {
+				"navigationBarTitleText": "发布房源 ",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/post/news_n",
+			"style": {
+				"navigationBarTitleText": "发布房源",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/news/index",
+			"style": {
+				"navigationBarTitleText": "新房列表",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/news/show",
+			"style": {
+				"navigationBarTitleText": "楼盘详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/news/house",
+			"style": {
+				"navigationBarTitleText": "新房详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/news/loupan",
+			"style": {
+				"navigationBarTitleText": "楼盘详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/zufang/index",
+			"style": {
+				"navigationBarTitleText": "租房列表",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/zufang/show",
+			"style": {
+				"navigationBarTitleText": "租房详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		}
+	    ,{
+            "path" : "pages/news/yuangong",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "员工详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#6d6d6d",
+		"selectedColor": "#C61013",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "/static/tabbar/tabbar1.png",
+			"selectedIconPath": "/static/tabbar/tabbar1-1.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/ershoufang/index",
+			"iconPath": "/static/tabbar/tabbar3.png",
+			"selectedIconPath": "/static/tabbar/tabbar3-3.png",
+			"text": "二手房"
+		}, {
+			"pagePath": "pages/sale/index",
+			"iconPath": "/static/tabbar/tabbar2.png",
+			"selectedIconPath": "/static/tabbar/tabbar2-2.png",
+			"text": "急售"
+		},{
+			"pagePath": "pages/my/index",
+			"iconPath": "/static/tabbar/tabbar4.png",
+			"selectedIconPath": "/static/tabbar/tabbar4-4.png",
+			"text": "我的"
+		}]
+	}
+}

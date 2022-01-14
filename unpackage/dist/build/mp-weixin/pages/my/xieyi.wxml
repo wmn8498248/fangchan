@@ -1,0 +1,1 @@
+<view class="container data-v-79c8a71a"><view class="bg-white pb10 pt10 data-v-79c8a71a"><view class="f16 bold mlr10 mb10 data-v-79c8a71a">用户协议内容</view><view class="infos mlr10 data-v-79c8a71a"><view class="f12 mtb10 color6 data-v-79c8a71a"><u-parse vue-id="25549fcc-1" html="{{detail.content}}" class="data-v-79c8a71a" bind:__l="__l"></u-parse></view></view></view></view>

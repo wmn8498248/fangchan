@@ -1,0 +1,14 @@
+
+page {
+	background-color: #F1F4F8
+}
+
+
+.infos.data-v-5357e832 {
+	font-size: 28rpx;
+	line-height:64rpx;
+}
+.infos.data-v-5357e832 ._p{
+	line-height: 64rpx;
+}
+

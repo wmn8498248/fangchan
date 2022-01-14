@@ -1,0 +1,28 @@
+
+page {
+	background-color: #F1F4F8
+}
+button {
+	background-color: #fff;
+	padding: 0;
+}
+button::after {
+	border: none;
+}
+
+
+.mainpic.data-v-0796657d{
+	width: 30vw;
+}
+.detail-title.data-v-0796657d{
+	display: flex;
+	flex-direction: row;
+}
+.detail-title .name.data-v-0796657d {
+	margin-left: 25rpx;
+}
+.detail-title .jianjie.data-v-0796657d {
+	margin-left: 25rpx;
+	margin-top: 30rpx;
+}
+

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "详情",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "u-parse": "/components/u-parse/u-parse"
+  }
+}

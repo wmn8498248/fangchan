@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "租房列表",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ds-zufang": "/components/ds/ds-zufang",
+    "ds-swiper": "/components/ds/ds-swiper"
+  }
+}

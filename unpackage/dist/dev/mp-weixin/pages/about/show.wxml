@@ -1,0 +1,1 @@
+<view class="container data-v-9bb78c10"><view class="content data-v-9bb78c10"><view class="h1 data-v-9bb78c10">{{''+detail.title+''}}</view><image class="thumb data-v-9bb78c10" src="{{detail.pic}}" mode="widthFix"></image><u-parse vue-id="db38f3e4-1" html="{{detail.content}}" class="data-v-9bb78c10" bind:__l="__l"></u-parse></view></view>

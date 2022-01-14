@@ -1,0 +1,84 @@
+
+page {
+	background-color: #fff
+}
+
+
+.banner.data-v-452e6662 {
+	width: 750rpx;
+	height: 162rpx;
+}
+.grid.data-v-452e6662 {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30rpx 30rpx 10rpx 30rpx;
+}
+.grid .grid-item.data-v-452e6662 {
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 24rpx;
+	color: #333333;
+	margin-bottom: 30rpx;
+}
+.grid .grid-item .icon.data-v-452e6662 {
+	width: 92rpx;
+	height: 92rpx;
+	margin-bottom: 10rpx;
+}
+.service-list.data-v-452e6662 {
+	display: flex;
+	flex-direction: column;
+	width: 712rpx;
+	background: #FFFFFF;
+	border-radius: 14rpx;
+	margin: 0 auto;
+	padding-bottom: 20rpx;
+}
+.service-list .item.data-v-452e6662 {
+	display: flex;
+	border-bottom: #eee 1px solid;
+	padding-bottom: 20rpx;
+}
+.service-list .item.data-v-452e6662:last-child {
+	border-bottom: none;
+}
+.service-list .item .thumb.data-v-452e6662 {
+	width: 259rpx;
+	height: 178rpx;
+}
+.service-list .item .desc.data-v-452e6662 {
+	font-size: 77rpx;
+}
+.service-list .item .title.data-v-452e6662 {
+	font-size: 24rpx;
+}
+.service-list .item .info .status.data-v-452e6662{
+	background-color: #C71114;
+	border-radius: 8rpx;
+	font-size: 24rpx;
+	font-weight: normal;
+	color: #fff;
+	padding: 4rpx 10rpx;
+}
+.service-list .item .tags.data-v-452e6662 {
+	display: flex;
+}
+.service-list .item .tags .tag.data-v-452e6662 {
+	padding: 0 16rpx;
+	height: 34rpx;
+	border-radius: 6rpx;
+	font-size: 24rpx;
+	background: #DBDBDB;
+	color: #333333;
+	margin-right: 16rpx;
+}
+.service-list .item .tags .tag.data-v-452e6662:last-child {
+	margin-right: 0;
+}
+.service-list .item .tags .tag.active.data-v-452e6662 {
+	background: #C71114;
+	color: #fff;
+}
+

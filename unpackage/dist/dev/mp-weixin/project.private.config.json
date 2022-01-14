@@ -1,0 +1,96 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/order/pay",
+          "pathName": "pages/order/pay",
+          "query": "id=5",
+          "scene": null
+        },
+        {
+          "name": "pages/order/index",
+          "pathName": "pages/order/index",
+          "query": "status=0",
+          "scene": null
+        },
+        {
+          "name": "pages/order/show",
+          "pathName": "pages/order/show",
+          "query": "id=50",
+          "scene": null
+        },
+        {
+          "name": "pages/address/index",
+          "pathName": "pages/address/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/address/add",
+          "pathName": "pages/address/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/index",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/money",
+          "pathName": "pages/shop/money",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/index",
+          "pathName": "pages/shop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/edit",
+          "pathName": "pages/shop/edit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/index",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/post/ershoufang",
+          "pathName": "pages/post/ershoufang",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/post/news",
+          "pathName": "pages/post/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/agent/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
